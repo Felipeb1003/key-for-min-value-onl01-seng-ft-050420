@@ -4,17 +4,17 @@ require 'pry'
 
 def key_for_min_value(name_hash)
  smallest_value_key = nil
- small_number = 0
- name_hash.collect do | key, value |
+ num = 1000000
+ 
+ name_hash.collect do |a, b|
 
      if name_hash == {}
      return nil
-    elsif value < small_number
-      small_number = value
-      smallest_value_key = key
-      
+    elsif b < num
+      num = b
+      smallest_value_key = a
     end
   end
-  
   smallest_value_key
+  
 end
